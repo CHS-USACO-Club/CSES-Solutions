@@ -11,12 +11,10 @@ int main() {
 	ll a[n];
 	for (ll i = 0; i < n; i++) {
 		cin >> a[i];
-		if (i !=  0) {
-			if (a[i] < a[i-1]) {
-				ll diff = (a[i-1] - a[i]);
-				sum += diff;
-				a[i] = a[i] + diff;
-			}
+		if (i != 0 && a[i] < a[i-1] ) {
+			ll diff = (a[i-1] - a[i]);
+			sum += diff;
+			a[i] = a[i] + diff;
 		}
 	}
 	cout << sum;
